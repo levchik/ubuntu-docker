@@ -3,10 +3,7 @@
 
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
-  config.vm.box_check_update = false
-
-  # Running docker as daemon on this port
-  config.vm.network "forwarded_port", guest: 2375, host: 2375
+  config.vm.box_check_update = true
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
